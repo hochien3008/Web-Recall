@@ -1,0 +1,4 @@
+# Large downloads (exceeds GitHub 100MB limit)
+downloads/*.apk
+downloads/*.ipa
+.DS_Store

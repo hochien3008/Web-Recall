@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recall — More than photos. A more you.</title>
+  <meta name="description" content="Let AI turn your everyday photos into meaningful memories. Organize, rediscover, and relive the moments that matter — effortlessly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="style.css?v=12">
+</head>
+<body>
+  <!-- Ambient Gradient Background Glows -->
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-top-right" aria-hidden="true"></div>
+  <div class="ambient-glow glow-center" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="Recall Home">
+        <div class="logo-icon">
+          <img src="assets/images/logo.png" alt="Recall Logo" class="brand-logo-img">
+        </div>
+        <span class="brand-name">Recall</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#privacy" class="nav-link">Privacy</a>
+        <a href="#support" class="nav-link">Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-primary nav-cta">Download App</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-layout">
+        
+        <!-- Left Column: Copy & Store CTAs -->
+        <div class="hero-content">
+          <div class="tagline">YOUR MOMENTS, A BRIGHTER YOU</div>
+          <h1 class="hero-title">
+            More than photos.<br>
+            <span class="gradient-text">A more you.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Let AI turn your everyday photos into meaningful memories. Organize, rediscover, and relive the moments that matter — effortlessly.
+          </p>
+
+          <!-- Store Badges -->
+          <div class="store-badges">
+            <a href="#download-ios" class="store-btn app-store" aria-label="Download on the App Store">
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.38c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.61 1.34-.55.63-1.03 1.67-.9 2.69 1 .08 2-.43 2.58-1.18z"/>
+              </svg>
+              <div class="store-btn-text">
+                <span class="store-btn-sub">Download on the</span>
+                <span class="store-btn-title">App Store</span>
+              </div>
+            </a>
+
+            <a href="downloads/recall.apk" download="recall.apk" class="store-btn google-play" aria-label="Tải file APK cho Android" title="Tải trực tiếp file APK cho thiết bị Android (152 MB)">
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186c-.328-.31-.52-.756-.52-1.284V3.098c0-.528.192-.974.52-1.284zm11.247 11.25L17.5 14.64l-11.758 6.77 9.114-8.346zm0-2.128L5.742 2.59 17.5 9.36l-2.644 1.576zM18.89 10.165l2.766 1.593a.925.925 0 010 1.6l-2.766 1.593-1.265-1.265 1.265-2.521z"/>
+              </svg>
+              <div class="store-btn-text">
+                <span class="store-btn-sub">TẢI FILE APK</span>
+                <span class="store-btn-title">Android (152MB)</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Social Proof / Rating -->
+          <div class="rating-badge">
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="rating-text">4.8 • 120K+ happy users</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Phone Mockup & Floating Polaroids -->
+        <div class="hero-visual">
+          <div class="showcase-stage" id="showcaseStage">
+            
+            <!-- Floating Polaroid 1 (Top Left: Dog) -->
+            <div class="polaroid polaroid-dog" data-tilt-factor="0.04">
+              <div class="polaroid-photo">
+                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=500&q=80" alt="Happy golden retriever dog smiling at camera" loading="lazy">
+              </div>
+              <div class="polaroid-caption">My best friend ♡</div>
+            </div>
+
+            <!-- Floating Polaroid 2 (Bottom Left: Beach Cove) -->
+            <div class="polaroid polaroid-beach" data-tilt-factor="0.03">
+              <div class="polaroid-photo">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Turquoise tropical bay and beach" loading="lazy">
+              </div>
+              <div class="polaroid-caption">Collect What Matters ♡</div>
+            </div>
+
+            <!-- Floating Polaroid 3 (Top Right: City Sunset) -->
+            <div class="polaroid polaroid-sunset" data-tilt-factor="0.05">
+              <div class="polaroid-photo">
+                <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=500&q=80" alt="Golden city sunset skyline" loading="lazy">
+              </div>
+              <div class="polaroid-caption">Same moments. Brighter days. ♡</div>
+            </div>
+
+            <!-- Decorative Floating Doodle Text & Elements -->
+            <div class="doodle-note doodle-top-right">
+              Good memories<br>brighter days ♡
+            </div>
+            
+            <div class="doodle-note doodle-bottom-right">
+              A brighter<br>tomorrow,<br>one photo<br>at a time. ♡
+            </div>
+
+            <!-- Floating decorative petals / sparkles -->
+            <div class="floating-petal petal-1" aria-hidden="true"></div>
+            <div class="floating-petal petal-2" aria-hidden="true"></div>
+            <div class="floating-petal petal-3" aria-hidden="true"></div>
+            <div class="sparkle-doodle sparkle-1">✧</div>
+            <div class="sparkle-doodle sparkle-2">✦</div>
+            <div class="heart-doodle heart-1">♡</div>
+
+            <!-- Central Realistic iPhone Mockup -->
+            <div class="phone-wrapper">
+              <div class="iphone-frame">
+                <!-- Outer Bezel & Hardware Buttons -->
+                <div class="hardware-button volume-up"></div>
+                <div class="hardware-button volume-down"></div>
+                <div class="hardware-button power"></div>
+                
+                <!-- Inner Screen -->
+                <div class="screen">
+                  <!-- iOS Status Bar -->
+                  <div class="ios-status-bar">
+                    <span class="status-time">9:41</span>
+                    <div class="dynamic-island">
+                      <div class="island-camera"></div>
+                      <div class="island-sensor"></div>
+                    </div>
+                    <div class="status-icons">
+                      <svg class="icon-signal" viewBox="0 0 16 12" fill="currentColor">
+                        <path d="M1 10h2V8H1v2zm4 0h2V6H5v4zm4 0h2V4H9v6zm4 0h2V1h-2v9z"/>
+                      </svg>
+                      <svg class="icon-wifi" viewBox="0 0 16 12" fill="currentColor">
+                        <path d="M8 9.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-4.2-2.8a6 6 0 0 1 8.4 0l1.4-1.4a8 8 0 0 0-11.2 0l1.4 1.4zm-2.8-2.8a10 10 0 0 1 14 0l1.4-1.4a12 12 0 0 0-16.8 0l1.4 1.4z"/>
+                      </svg>
+                      <div class="battery-icon">
+                        <div class="battery-level"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Inside App Content -->
+                  <div class="app-viewport">
+                    <!-- App Header -->
+                    <div class="app-header">
+                      <div class="app-logo">
+                        <img src="assets/images/logo.png" alt="Recall Logo" class="app-logo-img">
+                        <span class="app-title">Recall</span>
+                      </div>
+                    </div>
+
+                    <!-- Search Bar in App -->
+                    <div class="app-search-box">
+                      <svg class="search-lens" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="8.5" cy="8.5" r="5.5"/>
+                        <path d="M16 16l-3.5-3.5"/>
+                      </svg>
+                      <input type="text" placeholder="Search your memories..." class="search-input" readonly value="Search your memories...">
+                      <div class="sparkle-badge">
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M10 2l1.8 5.6L17.5 10l-5.7 2.4L10 18l-1.8-5.6L2.5 10l5.7-2.4L10 2z"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!-- Today Section -->
+                    <div class="app-section">
+                      <div class="section-title-row">
+                        <span class="section-title">Today</span>
+                        <span class="section-action">See all &gt;</span>
+                      </div>
+
+                      <!-- 5-Photo Collage Grid Matching Design Mockup -->
+                      <div class="memory-grid">
+                        <div class="grid-item item-sunset">
+                          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=500&q=80" alt="Friends celebrating on beach sunset">
+                        </div>
+                        <div class="grid-item item-cat">
+                          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="Cute tabby cat">
+                        </div>
+                        <div class="grid-item item-coffee">
+                          <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=500&q=80" alt="Hot latte art coffee cup">
+                        </div>
+                        <div class="grid-item item-cove">
+                          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Turquoise sea bay">
+                        </div>
+                        <div class="grid-item item-daisy">
+                          <img src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?auto=format&fit=crop&w=500&q=80" alt="White daisies in meadow">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Trips Section -->
+                    <div class="app-section">
+                      <div class="section-title-row">
+                        <span class="section-title">Trips</span>
+                        <span class="section-action">See all &gt;</span>
+                      </div>
+                      <div class="trip-banner">
+                        <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Scenic Mediterranean cliffside village">
+                      </div>
+                    </div>
+
+                    <!-- App Bottom Navigation Bar -->
+                    <div class="app-bottom-nav">
+                      <div class="nav-item active">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                        </svg>
+                        <span>Home</span>
+                      </div>
+                      <div class="nav-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                          <circle cx="8.5" cy="8.5" r="1.5"/>
+                          <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <span>Memories</span>
+                      </div>
+                      <div class="nav-center-action">
+                        <div class="circle-plus-btn">
+                          <span>+</span>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        <span>Albums</span>
+                      </div>
+                      <div class="nav-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                          <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <span>Profile</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Home Indicator Bar -->
+                  <div class="ios-home-indicator"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 4 Core Feature Pills (Positioned under text on desktop, under phone on mobile) -->
+        <div class="hero-features-container" id="features">
+          <div class="feature-pills-row">
+            <!-- 1. Organize automatically (Solid Sparkle - Brand Color) -->
+            <div class="feature-pill">
+              <div class="feature-pill-icon">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 2C16 9.73 9.73 16 2 16C9.73 16 16 22.27 16 30C16 22.27 22.27 16 30 16C22.27 16 16 9.73 16 2Z" fill="#4F46E5"/>
+                  <path d="M24 3C24 5.21 22.21 7 20 7C22.21 7 24 8.79 24 11C24 8.79 25.79 7 28 7C25.79 7 24 5.21 24 3Z" fill="#6366F1"/>
+                </svg>
+              </div>
+              <span class="feature-pill-title">Organize<br>automatically</span>
+            </div>
+
+            <!-- 2. Find anything instantly (Solid Search Lens - Brand Color) -->
+            <div class="feature-pill">
+              <div class="feature-pill-icon">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14 4C8.477 4 4 8.477 4 14C4 19.523 8.477 24 14 24C16.48 24 18.75 23.097 20.5 21.605L26.447 27.553C27.228 28.334 28.494 28.334 29.275 27.553C30.056 26.772 30.056 25.506 29.275 24.725L23.328 18.778C23.762 17.306 24 15.688 24 14C24 8.477 19.523 4 14 4ZM9 14C9 11.239 11.239 9 14 9C14.828 9 15.5 8.328 15.5 7.5C15.5 6.672 14.828 6 14 6C9.582 6 6 9.582 6 14C6 14.828 6.672 15.5 7.5 15.5C8.328 15.5 9 14.828 9 14Z" fill="#4F46E5"/>
+                </svg>
+              </div>
+              <span class="feature-pill-title">Find anything<br>instantly</span>
+            </div>
+
+            <!-- 3. Relive special moments (Solid Heart - Brand Color) -->
+            <div class="feature-pill">
+              <div class="feature-pill-icon">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 27.4L14.18 25.75C7.72 19.88 3.5 16.05 3.5 11.3C3.5 7.43 6.53 4.4 10.4 4.4C12.58 4.4 14.67 5.41 16 7.01C17.33 5.41 19.42 4.4 21.6 4.4C25.47 4.4 28.5 7.43 28.5 11.3C28.5 16.05 24.28 19.88 17.82 25.76L16 27.4Z" fill="#4F46E5"/>
+                  <path d="M8.5 9.5C8.5 8 9.8 7 11.8 7" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                </svg>
+              </div>
+              <span class="feature-pill-title">Relive special<br>moments</span>
+            </div>
+
+            <!-- 4. Always within reach (Solid Cloud - Brand Color) -->
+            <div class="feature-pill">
+              <div class="feature-pill-icon">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M25.8 13.4C24.9 8.8 20.8 5.3 16 5.3C12.1 5.3 8.8 7.5 7.1 10.7C3.1 11.2 0 14.5 0 18.7C0 23.1 3.6 26.7 8 26.7H25.3C29 26.7 32 23.7 32 20C32 16.5 29.3 13.6 25.8 13.4Z" fill="#4F46E5"/>
+                  <path d="M8.5 12.5C9.8 10.8 12.5 9.8 15.5 9.8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                </svg>
+              </div>
+              <span class="feature-pill-title">Always<br>within reach</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: HOW IT WORKS -->
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="container">
+        
+        <div class="how-it-works-header">
+          <h2 class="section-heading">How It Works</h2>
+          <p class="section-subheading">Turn your photos into meaningful memories in just a few steps.</p>
+        </div>
+
+        <div class="how-it-works-grid">
+          
+          <!-- 4 Sequential Step Cards with subtle connecting arrows -->
+          <div class="steps-flow">
+            <!-- Step 1: Import (Unified Brand Color) -->
+            <div class="step-card">
+              <div class="step-icon-box step-icon-brand">
+                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2.5" y="2.5" width="21" height="21" rx="5" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/>
+                  <circle cx="8.5" cy="8.5" r="2.2" fill="#4F46E5"/>
+                  <path d="M23.5 16.5L17.5 11L6 22.5" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M15 17.5L19 13.5L23.5 17.5" stroke="#4F46E5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="step-details">
+                <h3 class="step-title">Import</h3>
+                <p class="step-desc">Add your photos from your device</p>
+              </div>
+            </div>
+
+            <div class="step-arrow" aria-hidden="true">→</div>
+
+            <!-- Step 2: Organize (Unified Brand Color) -->
+            <div class="step-card">
+              <div class="step-icon-box step-icon-brand">
+                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2L15.6 8.4L22.5 11L15.6 13.6L13 20L10.4 13.6L3.5 11L10.4 8.4L13 2Z" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2" stroke-linejoin="round"/>
+                  <circle cx="21" cy="4" r="1.6" fill="#4F46E5"/>
+                  <circle cx="5" cy="20" r="1.6" fill="#6366F1"/>
+                </svg>
+              </div>
+              <div class="step-details">
+                <h3 class="step-title">Organize</h3>
+                <p class="step-desc">AI automatically sorts and groups</p>
+              </div>
+            </div>
+
+            <div class="step-arrow" aria-hidden="true">→</div>
+
+            <!-- Step 3: Explore (Unified Brand Color) -->
+            <div class="step-card">
+              <div class="step-icon-box step-icon-brand">
+                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="11.5" cy="11.5" r="7.5" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/>
+                  <!-- Lens compass diamond -->
+                  <path d="M11.5 7L13.5 11.5L9.5 12.5L11.5 7Z" fill="#4F46E5"/>
+                  <path d="M17 17L23 23" stroke="#4F46E5" stroke-width="2.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="step-details">
+                <h3 class="step-title">Explore</h3>
+                <p class="step-desc">Find moments, places, people and more</p>
+              </div>
+            </div>
+
+            <div class="step-arrow" aria-hidden="true">→</div>
+
+            <!-- Step 4: Relive (Unified Brand Color) -->
+            <div class="step-card">
+              <div class="step-icon-box step-icon-brand">
+                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 22.8L11.5 21.4C6.2 16.6 2.8 13.5 2.8 9.6C2.8 6.5 5.2 4 8.4 4C10.2 4 11.9 4.8 13 6.1C14.1 4.8 15.8 4 17.6 4C20.8 4 23.2 6.5 23.2 9.6C23.2 13.5 19.8 16.6 14.5 21.4L13 22.8Z" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M6.5 8.5C6.5 7.2 7.5 6.2 9 6.2" stroke="#6366F1" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="step-details">
+                <h3 class="step-title">Relive</h3>
+                <p class="step-desc">Rediscover your best memories anytime</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arched Image Feature with Inspirational Doodle Note -->
+          <div class="how-it-works-visual">
+            <div class="arch-card">
+              <img src="assets/images/how_it_works_lake.jpg" alt="Scenic tranquil lake sunset" class="arch-photo">
+              <div class="arch-overlay"></div>
+              <div class="arch-caption">
+                Same moments.<br>A brighter you. ♡
+              </div>
+            </div>
+            <!-- Leaf branch accent in the foreground corner -->
+            <div class="botanical-accent" aria-hidden="true"></div>
+          </div>
+
+        </div>
+
+        <!-- Mobile CTA Banner -->
+        <div class="mobile-cta-wrapper" id="download">
+          <a href="#download-app" class="btn btn-giant-gradient">
+            <span>Download Recall App</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="arrow-icon">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <p class="mobile-cta-sub">A brighter tomorrow, one photo at a time.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="brand-logo footer-logo">
+          <img src="assets/images/logo.png" alt="Recall Logo" class="footer-logo-img">
+          <span class="brand-name">Recall</span>
+        </div>
+        <p class="footer-tagline">A brighter tomorrow, one photo at a time.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#security">Local-First Security</a>
+        <a href="#support">Help & Support</a>
+      </div>
+
+      <div class="footer-copy">
+        &copy; 2026 Recall Inc. All rights reserved. On-device AI memory layer.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal / Interactive Download Dialog -->
+  <div class="download-modal-backdrop" id="downloadModal" aria-hidden="true">
+    <div class="download-modal">
+      <button class="modal-close" id="modalClose" aria-label="Close dialog">&times;</button>
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+      </div>
+      <h3>Tải ứng dụng Recall</h3>
+      <p>Chọn nền tảng của bạn để tải về và cài đặt trực tiếp:</p>
+      
+      <!-- Platform Download Cards -->
+      <div class="platform-download-list">
+        <!-- Android APK Direct Download -->
+        <a href="downloads/recall.apk" download="recall.apk" class="platform-card platform-android" id="modalApkDownloadBtn">
+          <div class="platform-icon android-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4147 13.8533 8.0833 12 8.0833s-3.5902.3314-5.1367.8665L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+            </svg>
+          </div>
+          <div class="platform-details">
+            <div class="platform-title-row">
+              <span class="platform-name">Android</span>
+              <span class="platform-tag">File .APK • 152 MB</span>
+            </div>
+            <span class="platform-action-text">Chạm để tải file APK về máy và cài đặt</span>
+          </div>
+          <div class="platform-btn-icon">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- iOS Platform Guidance -->
+        <div class="platform-card platform-ios" id="modalIosTrigger">
+          <div class="platform-icon ios-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.84c.66-.8 1.11-1.92.99-3.04-.96.04-2.12.64-2.8 1.44-.6.69-1.12 1.83-1 2.93 1.07.08 2.15-.53 2.81-1.33z"/>
+            </svg>
+          </div>
+          <div class="platform-details">
+            <div class="platform-title-row">
+              <span class="platform-name">iOS (iPhone / iPad)</span>
+              <span class="platform-tag ios-tag">TestFlight / .IPA</span>
+            </div>
+            <span class="platform-action-text">Xem hướng dẫn cài đặt trên iOS</span>
+          </div>
+          <div class="platform-btn-icon ios-chevron">›</div>
+        </div>
+      </div>
+
+      <!-- Expandable iOS Instructions -->
+      <div class="ios-expandable-panel" id="iosExpandablePanel" style="display: none;">
+        <div class="ios-methods-list">
+          <div class="ios-method-item">
+            <div class="method-header">
+              <span class="method-badge recommend">Khuyên dùng</span>
+              <h6>1. Cài đặt qua Apple TestFlight</h6>
+            </div>
+            <p>Tải app <em>TestFlight</em> từ App Store, sau đó nhấn link thử nghiệm để tự động cài app.</p>
+            <a href="https://testflight.apple.com" target="_blank" rel="noopener" class="btn btn-sm btn-brand">Mở trang TestFlight</a>
+          </div>
+
+          <div class="ios-method-item">
+            <div class="method-header">
+              <span class="method-badge">Nâng cao</span>
+              <h6>2. Cài qua file .IPA (Sideloading)</h6>
+            </div>
+            <p>File cài đặt của iOS là <code>.ipa</code> (tương đương <code>.apk</code>). Bạn cần sử dụng công cụ như <strong>AltStore</strong>, <strong>Sideloadly</strong> hoặc <strong>Scarlet</strong> trên máy tính để nạp file vào iPhone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVACY & SECURITY MODAL -->
+  <div class="download-modal-backdrop" id="privacyModal" aria-hidden="true">
+    <div class="download-modal info-modal">
+      <button class="modal-close" id="privacyModalClose" aria-label="Close privacy dialog">&times;</button>
+      <div class="modal-icon icon-green-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+      </div>
+      <h3>Privacy First, Always</h3>
+      <p class="modal-sub">Recall is built from the ground up as a 100% local-first AI memory layer. Your photos and memories never leave your device.</p>
+      
+      <div class="info-modal-cards">
+        <div class="info-card">
+          <div class="info-card-header">
+            <span class="info-badge green">100% On-Device</span>
+            <h4>Zero Cloud Upload</h4>
+          </div>
+          <p>All OCR text recognition and AI semantic embeddings execute entirely on your phone's processor. No server ever sees your photos.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-header">
+            <span class="info-badge purple">Smart Protection</span>
+            <h4>3-Level Text Guard</h4>
+          </div>
+          <ul class="protection-list">
+            <li><strong>Ordinary:</strong> Useful notes & text indexed locally in SQLite.</li>
+            <li><strong>Sensitive:</strong> Financial, ID & contact data are redacted before saving.</li>
+            <li><strong>Secret:</strong> Passwords, OTPs & PINs are instantly discarded from memory.</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-header">
+            <span class="info-badge blue">Original Integrity</span>
+            <h4>Your Photos Stay Intact</h4>
+          </div>
+          <p>Recall only references system photo identifiers. Deleting an item in Recall never alters or deletes your original camera roll.</p>
+        </div>
+      </div>
+
+      <div class="modal-buttons" style="margin-top: 20px;">
+        <button class="btn btn-primary" id="privacyGotItBtn" style="width: 100%;">Got it, thanks!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUPPORT & FAQ MODAL -->
+  <div class="download-modal-backdrop" id="supportModal" aria-hidden="true">
+    <div class="download-modal info-modal">
+      <button class="modal-close" id="supportModalClose" aria-label="Close support dialog">&times;</button>
+      <div class="modal-icon icon-blue-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+      </div>
+      <h3>Help & Support</h3>
+      <p class="modal-sub">Need assistance or have questions about Recall? We're here to help.</p>
+
+      <div class="info-modal-cards">
+        <div class="faq-item">
+          <h4>Does Recall require an internet connection?</h4>
+          <p>No. Recall operates completely offline. Photo scanning, text extraction, local search, and reminders do not need Wi-Fi or cellular data.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>How do I get started with AI semantic search?</h4>
+          <p>Once you open Search in the app, you can opt-in to download the compact on-device AI model (multilingual-e5-small) once, after which it runs 100% locally.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>How can I reach the developer team?</h4>
+          <p>Drop us an email at <strong>hochien3008@gmail.com</strong> or submit feedback directly through the Profile tab in the app.</p>
+        </div>
+      </div>
+
+      <div class="modal-buttons" style="margin-top: 20px;">
+        <a href="mailto:hochien3008@gmail.com" class="btn btn-primary" style="width: 100%;">Email: hochien3008@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=6"></script>
+</body>
+</html>
