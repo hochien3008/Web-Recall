@@ -4,12 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recall — More than photos. A more you.</title>
-  <meta name="description" content="Let AI turn your everyday photos into meaningful memories. Organize, rediscover, and relive the moments that matter — effortlessly.">
+  <meta name="description" content="AI-powered local memory layer for your photos. 100% on-device semantic search, privacy guard & smart organization.">
+  <link rel="canonical" href="https://hochien3008.github.io/Web-Recall/">
+  
+  <!-- Open Graph / Facebook / Zalo -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hochien3008.github.io/Web-Recall/">
+  <meta property="og:title" content="Recall — More than photos. A more you.">
+  <meta property="og:description" content="AI-powered local memory layer for your photos. 100% on-device semantic search, privacy guard & smart organization.">
+  <meta property="og:image" content="https://hochien3008.github.io/Web-Recall/assets/images/logo.png">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://hochien3008.github.io/Web-Recall/">
+  <meta name="twitter:title" content="Recall — More than photos. A more you.">
+  <meta name="twitter:description" content="AI-powered local memory layer for your photos. 100% on-device semantic search, privacy guard & smart organization.">
+  <meta name="twitter:image" content="https://hochien3008.github.io/Web-Recall/assets/images/logo.png">
+
+  <meta name="theme-color" content="#4F46E5">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
   <!-- Ambient Gradient Background Glows -->
@@ -30,6 +47,8 @@
       <nav class="nav-links" id="navLinks">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#faq" class="nav-link">FAQ</a>
         <a href="#privacy" class="nav-link">Privacy</a>
         <a href="#support" class="nav-link">Support</a>
       </nav>
@@ -192,53 +211,138 @@
                       </div>
                     </div>
 
-                    <!-- Today Section -->
-                    <div class="app-section">
-                      <div class="section-title-row">
-                        <span class="section-title">Today</span>
-                        <span class="section-action">See all &gt;</span>
+                    <!-- TAB 1: HOME (Default) -->
+                    <div class="app-tab-screen active" id="phoneTabHome">
+                      <!-- Today Section -->
+                      <div class="app-section">
+                        <div class="section-title-row">
+                          <span class="section-title">Today</span>
+                          <span class="section-action">See all &gt;</span>
+                        </div>
+
+                        <!-- 5-Photo Collage Grid Matching Design Mockup -->
+                        <div class="memory-grid">
+                          <div class="grid-item item-sunset">
+                            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=500&q=80" alt="Friends celebrating on beach sunset">
+                          </div>
+                          <div class="grid-item item-cat">
+                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="Cute tabby cat">
+                          </div>
+                          <div class="grid-item item-coffee">
+                            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=500&q=80" alt="Hot latte art coffee cup">
+                          </div>
+                          <div class="grid-item item-cove">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Turquoise sea bay">
+                          </div>
+                          <div class="grid-item item-daisy">
+                            <img src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?auto=format&fit=crop&w=500&q=80" alt="White daisies in meadow">
+                          </div>
+                        </div>
                       </div>
 
-                      <!-- 5-Photo Collage Grid Matching Design Mockup -->
-                      <div class="memory-grid">
-                        <div class="grid-item item-sunset">
-                          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=500&q=80" alt="Friends celebrating on beach sunset">
+                      <!-- Trips Section -->
+                      <div class="app-section">
+                        <div class="section-title-row">
+                          <span class="section-title">Trips</span>
+                          <span class="section-action">See all &gt;</span>
                         </div>
-                        <div class="grid-item item-cat">
-                          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="Cute tabby cat">
-                        </div>
-                        <div class="grid-item item-coffee">
-                          <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=500&q=80" alt="Hot latte art coffee cup">
-                        </div>
-                        <div class="grid-item item-cove">
-                          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Turquoise sea bay">
-                        </div>
-                        <div class="grid-item item-daisy">
-                          <img src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?auto=format&fit=crop&w=500&q=80" alt="White daisies in meadow">
+                        <div class="trip-banner">
+                          <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Scenic Mediterranean cliffside village">
                         </div>
                       </div>
                     </div>
 
-                    <!-- Trips Section -->
-                    <div class="app-section">
-                      <div class="section-title-row">
-                        <span class="section-title">Trips</span>
-                        <span class="section-action">See all &gt;</span>
+                    <!-- TAB 2: MEMORIES (Timeline Flashback) -->
+                    <div class="app-tab-screen" id="phoneTabMemories" style="display: none;">
+                      <div class="app-section">
+                        <div class="section-title-row">
+                          <span class="section-title">Flashbacks</span>
+                          <span class="section-action">1 Year Ago</span>
+                        </div>
+                        <div class="flashback-mock-card">
+                          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Beach trip flashback">
+                          <div class="flashback-overlay">
+                            <span>"Da Nang coastal sunrise ♡"</span>
+                          </div>
+                        </div>
                       </div>
-                      <div class="trip-banner">
-                        <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Scenic Mediterranean cliffside village">
+                      <div class="app-section">
+                        <div class="section-title-row">
+                          <span class="section-title">This Month</span>
+                          <span class="section-action">18 Photos</span>
+                        </div>
+                        <div class="mini-photos-row">
+                          <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=200&q=80" alt="Coffee">
+                          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=200&q=80" alt="Cat">
+                          <img src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?auto=format&fit=crop&w=200&q=80" alt="Flowers">
+                        </div>
                       </div>
                     </div>
 
-                    <!-- App Bottom Navigation Bar -->
-                    <div class="app-bottom-nav">
-                      <div class="nav-item active">
+                    <!-- TAB 3: ALBUMS (Smart Categorization) -->
+                    <div class="app-tab-screen" id="phoneTabAlbums" style="display: none;">
+                      <div class="app-section">
+                        <div class="section-title-row">
+                          <span class="section-title">Smart Vault</span>
+                          <span class="section-action">4 Albums</span>
+                        </div>
+                        <div class="smart-albums-grid">
+                          <div class="album-thumb-card">
+                            <span class="album-emoji">🧾</span>
+                            <span class="album-name">Receipts & Bills</span>
+                            <span class="album-count">42 items</span>
+                          </div>
+                          <div class="album-thumb-card">
+                            <span class="album-emoji">🏖️</span>
+                            <span class="album-name">Vacations</span>
+                            <span class="album-count">128 items</span>
+                          </div>
+                          <div class="album-thumb-card">
+                            <span class="album-emoji">🐾</span>
+                            <span class="album-name">Pets & Friends</span>
+                            <span class="album-count">85 items</span>
+                          </div>
+                          <div class="album-thumb-card">
+                            <span class="album-emoji">📄</span>
+                            <span class="album-name">Documents</span>
+                            <span class="album-count">19 items</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- TAB 4: PROFILE (Local-First Engine Status) -->
+                    <div class="app-tab-screen" id="phoneTabProfile" style="display: none;">
+                      <div class="app-section">
+                        <div class="profile-header-card">
+                          <div class="profile-avatar">RE</div>
+                          <div class="profile-info">
+                            <h5 style="margin:0;font-size:0.95rem;font-weight:800;">Recall Vault</h5>
+                            <span class="badge-vault">100% On-Device</span>
+                          </div>
+                        </div>
+                        <div class="profile-stats-card">
+                          <div class="p-stat"><span class="p-val">1,420</span><span class="p-lbl">Photos</span></div>
+                          <div class="p-stat"><span class="p-val">0 KB</span><span class="p-lbl">Cloud</span></div>
+                          <div class="p-stat"><span class="p-val">&lt;50ms</span><span class="p-lbl">Search</span></div>
+                        </div>
+                        <div class="profile-settings-list">
+                          <div class="p-setting-item"><span>🔒 Local Vector DB</span><strong>Active</strong></div>
+                          <div class="p-setting-item"><span>🛡️ 3-Level Text Guard</span><strong>Enabled</strong></div>
+                          <div class="p-setting-item"><span>⚡ NPU Acceleration</span><strong>On</strong></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- App Bottom Navigation Bar with Interactive Simulator Tabs -->
+                    <div class="app-bottom-nav" id="appBottomNav">
+                      <div class="nav-item active" data-phone-tab="home">
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
                         </svg>
                         <span>Home</span>
                       </div>
-                      <div class="nav-item">
+                      <div class="nav-item" data-phone-tab="memories">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                           <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                           <circle cx="8.5" cy="8.5" r="1.5"/>
@@ -251,13 +355,13 @@
                           <span>+</span>
                         </div>
                       </div>
-                      <div class="nav-item">
+                      <div class="nav-item" data-phone-tab="albums">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                           <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
                         </svg>
                         <span>Albums</span>
                       </div>
-                      <div class="nav-item">
+                      <div class="nav-item" data-phone-tab="profile">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                           <circle cx="12" cy="7" r="4"/>
@@ -324,6 +428,150 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- SECTION: SOCIAL PROOF / STATS STRIP -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">120K+</span>
+            <span class="stat-label">Active Recallers</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-card">
+            <span class="stat-number">4.8 ★</span>
+            <span class="stat-label">App Rating Score</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-card">
+            <span class="stat-number">0 MB</span>
+            <span class="stat-label">Cloud Uploads (100% Local)</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-card">
+            <span class="stat-number">&lt; 50ms</span>
+            <span class="stat-label">Neural Search Latency</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: BENTO GRID FEATURE SHOWCASE -->
+    <section class="bento-section" id="features">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Intelligent Capabilities</span>
+          <h2 class="section-heading">Smart Features. Pure Privacy.</h2>
+          <p class="section-subheading">Turn your photo gallery from a digital graveyard into an instant personal knowledge base.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento 1: Interactive AI Semantic Search (Span 2 cols) -->
+          <div class="bento-card bento-search-demo">
+            <div class="bento-card-header">
+              <div class="bento-badge">AI Semantic Search</div>
+              <h3 class="bento-title">Find Photos by What You Remember, Not Just Tags</h3>
+              <p class="bento-desc">Type naturally — descriptions, text in photos, objects, or moods. Recall scans locally in milliseconds.</p>
+            </div>
+            
+            <div class="interactive-search-demo">
+              <div class="demo-search-bar">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" class="demo-search-icon">
+                  <circle cx="8.5" cy="8.5" r="5.5"/>
+                  <path d="M16 16l-3.5-3.5"/>
+                </svg>
+                <span class="demo-query-text" id="demoQueryText">"Sunday morning latte art"</span>
+                <span class="demo-instant-badge">&lt; 38ms</span>
+              </div>
+              <div class="demo-query-chips">
+                <span class="chip-label">Try queries:</span>
+                <button class="demo-chip active" data-query="Sunday morning latte art" data-title="Hot latte art coffee cup" data-score="98.7%" data-img="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=500&q=80">☕ Latte art</button>
+                <button class="demo-chip" data-query="Cute tabby cat on rug" data-title="Tabby cat relaxing" data-score="99.2%" data-img="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80">🐱 Tabby cat</button>
+                <button class="demo-chip" data-query="Friends beach sunset party" data-title="Friends celebrating on beach sunset" data-score="97.5%" data-img="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=500&q=80">🌅 Beach sunset</button>
+                <button class="demo-chip" data-query="White daisy flowers meadow" data-title="White daisies in meadow" data-score="96.8%" data-img="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?auto=format&fit=crop&w=500&q=80">🌼 Daisies</button>
+              </div>
+              <div class="demo-results-preview" id="demoResultsPreview">
+                <div class="demo-result-card">
+                  <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=500&q=80" alt="Latte art" id="demoResultImg" class="demo-result-thumb">
+                  <div class="demo-result-info">
+                    <span class="demo-result-title" id="demoResultTitle">Match: "Hot latte art coffee cup"</span>
+                    <span class="demo-result-meta" id="demoResultMeta">OCR match + Vision Embedding 98.7%</span>
+                  </div>
+                  <span class="demo-found-pill">Instant Hit</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 2: 100% Local-First Privacy (Span 1 col) -->
+          <div class="bento-card bento-privacy">
+            <div class="bento-card-header">
+              <div class="bento-badge green-badge">Local-First Vault</div>
+              <h3 class="bento-title">Zero Cloud Upload</h3>
+              <p class="bento-desc">No accounts, no external tracking, no cloud storage. All AI embeddings run directly on your smartphone processor.</p>
+            </div>
+            <div class="privacy-visual-box">
+              <div class="chip-circuit-box">
+                <div class="cpu-core">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                  <span>NPU Engine</span>
+                </div>
+              </div>
+              <div class="privacy-guarantees">
+                <div class="guarantee-pill">✓ SQLite Local Vector DB</div>
+                <div class="guarantee-pill">✓ 3-Level Auto Redaction</div>
+                <div class="guarantee-pill">✓ Works 100% Offline</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 3: Smart Categorization (Span 1 col) -->
+          <div class="bento-card bento-organize">
+            <div class="bento-card-header">
+              <div class="bento-badge">Clean & Structured</div>
+              <h3 class="bento-title">Auto-Cleans Digital Clutter</h3>
+              <p class="bento-desc">Recall automatically isolates temporary photos (receipts, tickets, documents) away from real personal memories.</p>
+            </div>
+            <div class="categories-stack">
+              <div class="cat-pill"><span class="cat-dot blue"></span> Receipts & Bills <strong>42</strong></div>
+              <div class="cat-pill"><span class="cat-dot purple"></span> Travel & Vacations <strong>18</strong></div>
+              <div class="cat-pill"><span class="cat-dot green"></span> Whiteboard & Notes <strong>9</strong></div>
+              <div class="cat-pill"><span class="cat-dot amber"></span> IDs & Documents <strong>6</strong></div>
+            </div>
+          </div>
+
+          <!-- Bento 4: Widgets & Reminders (Span 2 cols) -->
+          <div class="bento-card bento-widgets">
+            <div class="bento-card-header">
+              <div class="bento-badge">Home Screen Widgets</div>
+              <h3 class="bento-title">Rediscover Today, Years Ago</h3>
+              <p class="bento-desc">Place beautiful interactive widgets on your iOS or Android home screen to brighten your day with timely flashbacks.</p>
+            </div>
+            <div class="widget-preview-box">
+              <div class="mock-widget">
+                <div class="widget-header">
+                  <div class="widget-brand-mini">
+                    <img src="assets/images/logo.png" alt="Recall" class="widget-icon-mini">
+                    <span>Recall Flashback</span>
+                  </div>
+                  <span class="widget-time-pill">1 Year Ago Today</span>
+                </div>
+                <div class="widget-content">
+                  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Beach Cove">
+                  <div class="widget-caption">
+                    <span class="widget-title">Summer in Da Nang</span>
+                    <span class="widget-sub">"Collect what matters most ♡"</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -434,6 +682,152 @@
           <p class="mobile-cta-sub">A brighter tomorrow, one photo at a time.</p>
         </div>
 
+      </div>
+    </section>
+
+    <!-- SECTION: TESTIMONIALS & SOCIAL PROOF -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Loved by Recallers</span>
+          <h2 class="section-heading">Loved by Everyday Photographers</h2>
+          <p class="section-subheading">See how Recall helps people keep their memories close and camera rolls clutter-free.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Finally an app that can search through my photos without uploading my entire personal life to the cloud. Finding old receipts and tax documents takes 2 seconds now."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-blue">TN</div>
+              <div class="author-meta">
+                <span class="author-name">Trần Nhật Nam</span>
+                <span class="author-title">Freelance Designer & Photographer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card featured-testimonial">
+            <div class="featured-ribbon">Top Review</div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"The on-device semantic search is mind-blowing. I searched 'bánh mì gần hồ gươm' and it found the exact photo I took 8 months ago. Zero cloud lag, zero battery drain."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-purple">LH</div>
+              <div class="author-meta">
+                <span class="author-name">Lê Hoàng Linh</span>
+                <span class="author-title">Software Engineer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"I take thousands of photos of my pets and daily coffee. The auto-categorization keeps my gallery clean while the daily flashbacks brighten my morning routine."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-indigo">MA</div>
+              <div class="author-meta">
+                <span class="author-name">Mai Anh Nguyễn</span>
+                <span class="author-title">Architecture Student</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE FAQ ACCORDION -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-heading">Frequently Asked Questions</h2>
+          <p class="section-subheading">Everything you need to know about Recall, on-device AI, and local privacy.</p>
+        </div>
+
+        <div class="faq-accordion-container">
+          <!-- FAQ 1 -->
+          <div class="accordion-item active">
+            <button class="accordion-header" aria-expanded="true">
+              <span class="faq-question">Does Recall require an active internet connection?</span>
+              <span class="accordion-icon">−</span>
+            </button>
+            <div class="accordion-body">
+              <p>No. Recall is built 100% offline. Photo scanning, OCR text extraction, semantic vector search, and memory reminders run locally on your phone's processor. No Wi-Fi or cellular data is required.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="faq-question">Are my photos or personal data ever uploaded to external servers?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Never. Recall is a zero-cloud application. Your images remain safely in your phone's camera roll. All AI mathematical vectors are stored in a private, encrypted SQLite database inside the app's sandbox.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="faq-question">How does semantic search work without manual tags?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Recall runs a compact on-device embedding model (multilingual-e5-small). When you type a query like "golden retriever smiling", it converts the meaning into vector coordinates and matches against your indexed photos in under 50 milliseconds.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="faq-question">Does Recall consume excessive battery or device storage?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Not at all. Recall uses smart background indexing that pauses when battery is low or when phone is active. The vector database occupies only a few megabytes, even for libraries with over 15,000 photos.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="faq-question">How can I install Recall on Android and iOS?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>For Android, tap "Tải file APK" to download and install directly. For iOS, you can install via Apple TestFlight with 1-click or sideload the .IPA file using AltStore or Sideloadly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: FINAL HIGH-CONVERSION CTA BANNER -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="cta-banner-content">
+            <div class="cta-badge">Ready for a clearer mind?</div>
+            <h2 class="cta-headline">More than photos. A more you.</h2>
+            <p class="cta-subheadline">Start turning everyday camera roll clutter into your personal offline knowledge base today.</p>
+            <div class="cta-actions-group">
+              <a href="downloads/recall.apk" download="recall.apk" class="btn btn-cta-primary">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="cta-btn-icon">
+                  <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4147 13.8533 8.0833 12 8.0833s-3.5902.3314-5.1367.8665L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+                </svg>
+                <span>Tải APK cho Android (152MB)</span>
+              </a>
+              <a href="#download" class="btn btn-cta-secondary">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="cta-btn-icon">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.84c.66-.8 1.11-1.92.99-3.04-.96.04-2.12.64-2.8 1.44-.6.69-1.12 1.83-1 2.93 1.07.08 2.15-.53 2.81-1.33z"/>
+                </svg>
+                <span>Cài đặt cho iOS</span>
+              </a>
+            </div>
+            <span class="cta-trust-note">Free download • 100% on-device privacy • No credit card required</span>
+          </div>
+        </div>
       </div>
     </section>
   </main>

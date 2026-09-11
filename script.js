@@ -185,16 +185,126 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Interactive Phone Mockup Navigation
+  // 4. Interactive Phone Mockup Navigation & Tab Switching
   const phoneNavItems = document.querySelectorAll('.app-bottom-nav .nav-item');
+  const phoneScreens = {
+    home: document.getElementById('phoneTabHome'),
+    memories: document.getElementById('phoneTabMemories'),
+    albums: document.getElementById('phoneTabAlbums'),
+    profile: document.getElementById('phoneTabProfile')
+  };
+
   phoneNavItems.forEach(navItem => {
     navItem.addEventListener('click', () => {
+      const tabKey = navItem.getAttribute('data-phone-tab');
+      if (!tabKey || !phoneScreens[tabKey]) return;
+
       phoneNavItems.forEach(item => item.classList.remove('active'));
       navItem.classList.add('active');
+
+      Object.values(phoneScreens).forEach(screen => {
+        if (screen) {
+          screen.style.display = 'none';
+          screen.classList.remove('active');
+        }
+      });
+
+      phoneScreens[tabKey].style.display = 'block';
+      phoneScreens[tabKey].classList.add('active');
     });
   });
 
-  // 5. Interactive Photo Grid Click (light feedback)
+  // 5. Bento Search Interactive Demo Chips
+  const demoChips = document.querySelectorAll('.demo-chip');
+  const demoQueryText = document.getElementById('demoQueryText');
+  const demoResultImg = document.getElementById('demoResultImg');
+  const demoResultTitle = document.getElementById('demoResultTitle');
+  const demoResultMeta = document.getElementById('demoResultMeta');
+  const demoResultsPreview = document.getElementById('demoResultsPreview');
+
+  demoChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      demoChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      const query = chip.getAttribute('data-query');
+      const title = chip.getAttribute('data-title');
+      const score = chip.getAttribute('data-score');
+      const img = chip.getAttribute('data-img');
+
+      if (demoQueryText) {
+        demoQueryText.textContent = `"${query}"`;
+      }
+
+      if (demoResultsPreview) {
+        demoResultsPreview.style.opacity = '0.35';
+        demoResultsPreview.style.transform = 'scale(0.98)';
+        setTimeout(() => {
+          if (demoResultImg) demoResultImg.src = img;
+          if (demoResultTitle) demoResultTitle.textContent = `Match: "${title}"`;
+          if (demoResultMeta) demoResultMeta.textContent = `OCR match + Vision Embedding ${score}`;
+          demoResultsPreview.style.opacity = '1';
+          demoResultsPreview.style.transform = 'scale(1)';
+        }, 140);
+      }
+    });
+  });
+
+  // 6. Accessible FAQ Accordion Toggle
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.accordion-item');
+      if (!item) return;
+
+      const isCurrentActive = item.classList.contains('active');
+
+      // Close all other accordion items
+      document.querySelectorAll('.accordion-item').forEach(otherItem => {
+        otherItem.classList.remove('active');
+        const otherHeader = otherItem.querySelector('.accordion-header');
+        const otherIcon = otherItem.querySelector('.accordion-icon');
+        if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
+        if (otherIcon) otherIcon.textContent = '+';
+      });
+
+      // Toggle clicked item
+      if (!isCurrentActive) {
+        item.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+        const icon = item.querySelector('.accordion-icon');
+        if (icon) icon.textContent = '−';
+      }
+    });
+  });
+
+  // 7. Scroll Reveal Animations using IntersectionObserver
+  const revealElements = document.querySelectorAll(
+    '.bento-card, .testimonial-card, .stat-card, .how-it-works-header, .steps-flow, .faq-accordion-container, .cta-banner-card'
+  );
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    revealElements.forEach(el => {
+      el.classList.add('reveal-on-scroll');
+      revealObserver.observe(el);
+    });
+  } else {
+    revealElements.forEach(el => el.classList.add('is-revealed'));
+  }
+
+  // 8. Interactive Photo Grid Click (light feedback)
   const gridPhotos = document.querySelectorAll('.memory-grid .grid-item');
   gridPhotos.forEach(photo => {
     photo.addEventListener('click', () => {
@@ -205,3 +315,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
